@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="model/layui/src/css/layui.css">
+  <link rel="stylesheet" href="model/animate/animate.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Document</title>
+  <style>
+    .bobey-nav {
+      box-shadow: 0 1px 5px rgba(177, 177, 177, 0.3);
+    }
+
+    .bobey-nav-logo {
+      float: left;
+    }
+
+    .bobey-aside-button,
+    .bobey-nav-aside {
+      display: none;
+    }
+
+    .bobey-nav-tool button {
+      color: wheat!important;
+      float: left;
+    }
+
+    .bobey-nav-tool>div>button {
+      background: none;
+      border: none !important;
+    }
+
+    @media screen and (max-width: 768px) {
+      .bobey-aside-button {
+        display: block;
+      }
+
+      .bobey-nav>.layui-nav>li>a {
+        display: none !important;
+      }
+
+      .bobey-nav-logo {
+        float: none;
+
+      }
+
+      .bobey-nav-tool {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 主导航 桌面端-->
+  <nav style="position: fixed;width: 100%;z-index: 10004;" class="bobey-nav">
+    <!-- 主导航  居中-->
+    <ul class="layui-nav" style="text-align: center" lay-filter="demo">
+      <!-- logo -->
+      <li class="layui-nav-item bobey-nav-logo">社区</li>
+
+      <li class="layui-nav-item"><a href="">最新活动</a></li>
+      <li class="layui-nav-item layui-this">
+        <a href="javascript:;">产品</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:void(0)">选项1</a></dd>
+          <dd><a href="">选项2</a></dd>
+          <dd><a href="">选项3</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">大数据</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">移动模块</a></dd>
+          <dd><a href="">后台模版</a></dd>
+          <dd class="layui-this"><a href="">选中项</a></dd>
+          <dd><a href="">电商平台</a></dd>
+        </dl>
+      </li>
+
+      <!-- 右边导航 -->
+      <li class="layui-nav-item bobey-nav-tool" style="float: right;">
+        <div class="layui-btn-group">
+          <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"><i
+              class="layui-icon layui-icon-notice"></i></button>
+          <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"><i
+              class="layui-icon layui-icon-headset"></i></button>
+          <button type="button" class="layui-btn layui-btn-primary layui-btn-sm bobey-aside-button"><i
+              class="layui-icon layui-icon-more"></i></button>
+        </div>
+      </li>
+    </ul>
+
+  </nav>
+
+  <!-- 侧边导航 -->
+  <aside>
+    <ul class="layui-nav layui-nav-tree layui-nav-side bobey-nav-aside animated"
+      style="text-align: center;margin-top: 60px;width: 100%;z-index: 10000;">
+      <!-- logo -->
+      <li class="layui-nav-item"><a href="javascript:void(0)">社区</a></li>
+      <li class="layui-nav-item"><a href="">最新活动</a></li>
+      <li class="layui-nav-item layui-this">
+        <a href="javascript:;">产品</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">选项1</a></dd>
+          <dd><a href="">选项2</a></dd>
+          <dd><a href="">选项3</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">大数据</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">移动模块</a></dd>
+          <dd><a href="">后台模版</a></dd>
+          <dd class="layui-this"><a href="">选中项</a></dd>
+          <dd><a href="">电商平台</a></dd>
+        </dl>
+      </li>
+    </ul>
+  </aside>
+  <style>
+    section>div>div {
+
+      padding: 5px
+    }
+
+
+    section>div>div>div>div {
+      padding: 5px;
+
+    }
+  </style>
+  <!-- 主体部分 -->
+  <section style="padding-top: 70px;">
+    <div class="layui-row ">
+      <!-- 主体部分左边 -->
+      <div class="layui-col-md9">
+        <div class="layui-row">
+          <div class="layui-col-md12">
+            12
+          </div>
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6 ">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-info">
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                      <span> <i class="layui-icon layui-icon-face-smile" style="color: #1E9FFF;"></i> 11</span>
+                    </div>
+
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="layui-col-md4 layui-col-sm6">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md4 layui-col-sm6">
+            <div class="post-list-item">
+              <div class="post-list-item-container">
+                <div class="item-thumb  bg-deepgrey"
+                  style="background-image:url(https://www.bobey.site/static/halo-frontend/images/thumbnail/thumbnail-8.jpg);">
+                </div>
+                <a href="/archives/1561201477754">
+                  <div class="item-desc">
+                    <p>产生原因最近做一简单的缓存，使用到springcache框架，集成EhCache。其间多方面努力解决</p>
+                  </div>
+                </a>
+                <div class="item-slant reverse-slant  bg-deepgrey"></div>
+                <div class="item-slant"></div>
+                <div class="item-label">
+                  <div class="item-title">
+                    <a href="/archives/1561201477754">Spring Cache注解无效：可能是类内方法调用注解缓存的方法</a>
+                  </div>
+                  <div class="item-meta clearfix">
+                    <div class="item-meta-ico bg-ico-code
+" style="background: url(/pinghsu-halo-1.1/source/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                    <div class="item-meta-cat">
+                      <a href="https://www.bobey.site/categories/default/">未分类</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 主体部分右边 -->
+      <div class="layui-col-md3">
+        <div class="layui-row">
+          <div class="layui-col-md12">
+            <div class="layui-tab">
+              <ul class="layui-tab-title" style="text-align: center">
+                <li class="layui-this">网站设置</li>
+                <li>用户管理</li>
+                <li>权限分配</li>
+
+              </ul>
+              <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                  <ul>
+                    <li><a title="为什么程序媛比程序猿写的代码更好？" href="/i?778">为什么程序媛比程序猿写的代码更好？</a></li>
+                    <li><a title="js彻底解决中文乱码问题" href="/i?775">js彻底解决中文乱码问题</a></li>
+                    <li><a title="乐山大佛闭眼事件 惊天骇闻大曝光" href="/i?774">乐山大佛闭眼事件 惊天骇闻大曝光乐山大佛闭眼事件 惊天骇闻大曝光乐山大佛闭眼事件 惊天骇闻大曝光</a></li>
+                    <li><a title="JS哪些操作会造成内存泄露" href="/i?773">JS哪些操作会造成内存泄露</a></li>
+                    <li><a title="iframe的优缺点" href="/i?768">iframe的优缺点</a></li>
+                    <li><a title="Javascript判断扫码枪的输入，以及扫码后提交表单数据" href="/i?770">Javascript判断扫码枪的输入，以及扫码后提交表单数据</a></li>
+                    <li><a title="为什么程序媛比程序猿写的代码更好？" href="/i?778">为什么程序媛比程序猿写的代码更好？</a></li>
+                    <li><a title="js彻底解决中文乱码问题" href="/i?775">js彻底解决中文乱码问题</a></li>
+                    <li><a title="乐山大佛闭眼事件 惊天骇闻大曝光" href="/i?774">乐山大佛闭眼事件 惊天骇闻大曝光</a></li>
+                    <li><a title="JS哪些操作会造成内存泄露" href="/i?773">JS哪些操作会造成内存泄露</a></li>
+                    <li><a title="iframe的优缺点" href="/i?768">iframe的优缺点</a></li>
+                    <li><a title="Javascript判断扫码枪的输入，以及扫码后提交表单数据" href="/i?770">Javascript判断扫码枪的输入，以及扫码后提交表单数据</a></li>
+                  </ul>
+                  </ul>
+                </div>
+                <div class="layui-tab-item">内容2</div>
+                <div class="layui-tab-item">内容3</div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12">
+            <div class="layui-tab">
+              <ul class="layui-tab-title" style="text-align: center">
+                <li class="layui-this">网站设置</li>
+                <li>用户管理</li>
+                <li>权限分配</li>
+
+              </ul>
+              <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                  1. 高度默认自适应，也可以随意固宽。
+                  <br>2. Tab进行了响应式处理，所以无需担心数量多少。
+                </div>
+                <div class="layui-tab-item">内容2</div>
+                <div class="layui-tab-item">内容3</div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header">卡片面板</div>
+              <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header">卡片面板</div>
+              <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header">卡片面板</div>
+              <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header">卡片面板</div>
+              <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 底部导航 -->
+  <footer>
+
+  </footer>
+  <script src="model/layui/src/layui.js"></script>
+  <script src="model/headroom/headroom.js"></script>
+  <script>
+    layui.use(['element', 'jquery', 'layer'], function () {
+      var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+      var $ = layui.jquery;
+      var layer = layui.layer;
+
+      window.onresize = function () {
+        location.reload();
+      }
+
+      $(".bobey-aside-button").click(function () {
+        $(".bobey-nav-aside").css("display", "block");
+
+
+        if ($(".bobey-nav-aside").hasClass("slideInDown")) {
+
+          $(".bobey-nav-aside").removeClass("slideInDown");
+          $(".bobey-nav-aside").addClass("slideOutUp");
+          $("body").css("overflow-y", "auto");
+        }
+        else {
+
+          $(".bobey-nav-aside").removeClass("slideOutUp");
+          $(".bobey-nav-aside").addClass("slideInDown");
+          $("body").css("overflow-y", "hidden");
+
+        }
+
+
+      });
+      //监听导航点击
+      element.on('nav(demo)', function (elem) {
+
+        console.log(elem);
+
+      });
+    });
+
+    // grab an element
+    var elem = document.querySelector("nav");
+    var headroom = new Headroom(elem, {
+      "tolerance": 5,
+      "offset": 205,
+      "classes": {
+        "initial": "animated",
+        "pinned": "slideInDown",
+        "unpinned": "slideOutUp"
+      }
+    });
+    headroom.init(); 
+  </script>
+</body>
+
+</html>
